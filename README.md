@@ -27,6 +27,18 @@ UniApp.xcodeproj/   # Xcode projesi
 3. Çalıştırma hedefi olarak iOS 17+ bir simülatör seçin (iPhone SE (3. nesil), iPhone 13 mini, iPhone 15, iPhone 15 Pro Max önerilir).
 4. `Command + R` ile uygulamayı başlatın.
 
+### Xcode ↔︎ GitHub kimlik doğrulaması
+Xcode’un GitHub depolarına erişirken “Credentials rejected” hatası vermesi genellikle Git’in kimlik bilgisi yardımcı programının eksik olmasından veya GitHub hesabı için kişisel erişim jetonu (PAT) kullanılmamasından kaynaklanır. macOS tarafında aşağıdaki adımları izleyerek bağlantıyı onarın:
+
+1. Terminal’de Git’in macOS anahtar zinciri yardımcı programını kullandığından emin olun:
+   ```bash
+   git config --global credential.helper osxkeychain
+   ```
+2. GitHub’da **Developer settings → Personal access tokens → Tokens (classic)** bölümünden en az `repo` yetkisine sahip bir PAT oluşturun. Xcode’un Accounts paneline giriş yaparken bu jetonu şifre olarak kullanın.
+3. Eğer daha önce başarısız denemeler yaptıysanız `Keychain Access` uygulamasında `github.com` girdilerini silip tekrar deneyin.
+
+Bu ayarlardan sonra Xcode’un `Source Control → Sign in to GitHub…` akışında kullanıcı adı olarak GitHub hesabınızı, şifre olarak oluşturduğunuz PAT’i girerek depoya erişebilirsiniz.
+
 ## Testler
 - Unit testleri: `xcodebuild -scheme UniApp -destination 'platform=iOS Simulator,name=iPhone 15' test`
 - UI testleri: Aynı komutla otomatik olarak tetiklenir.
