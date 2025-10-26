@@ -120,7 +120,7 @@
 		buildSettings = {
 		CODE_SIGN_STYLE = Automatic;
 		CURRENT_PROJECT_VERSION = 1;
-		DEVELOPMENT_TEAM = ;
+		DEVELOPMENT_TEAM = "";
 		INFOPLIST_FILE = "UniAppUITests/Info.plist";
 		IPHONEOS_DEPLOYMENT_TARGET = "17.0";
 		LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -503,7 +503,7 @@
 		buildSettings = {
 		CODE_SIGN_STYLE = Automatic;
 		CURRENT_PROJECT_VERSION = 1;
-		DEVELOPMENT_TEAM = ;
+		DEVELOPMENT_TEAM = "";
 		INFOPLIST_FILE = "UniApp/Info.plist";
 		IPHONEOS_DEPLOYMENT_TARGET = "17.0";
 		LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -520,7 +520,7 @@
 		buildSettings = {
 		CODE_SIGN_STYLE = Automatic;
 		CURRENT_PROJECT_VERSION = 1;
-		DEVELOPMENT_TEAM = ;
+		DEVELOPMENT_TEAM = "";
 		INFOPLIST_FILE = "UniAppTests/Info.plist";
 		IPHONEOS_DEPLOYMENT_TARGET = "17.0";
 		LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -633,13 +633,13 @@
 		LastUpgradeCheck = 1500;
 		TargetAttributes = {
 		2D2AECE376054C768654DBB2 = {
-		DevelopmentTeam = ;
+		DevelopmentTeam = "";
 	};
 		43FA92409C5441C3B67987A4 = {
-		DevelopmentTeam = ;
+		DevelopmentTeam = "";
 	};
 		27267F3FC4B94A57BA4E879A = {
-		DevelopmentTeam = ;
+		DevelopmentTeam = "";
 	};
 	};
 	};
@@ -654,8 +654,8 @@
 	);
 		mainGroup = A3ADE4D839B64003B9937E9E;
 		productRefGroup = CCF5479028124826AC7AA33D;
-		projectDirPath = ;
-		projectRoot = ;
+		projectDirPath = "";
+		projectRoot = "";
 		targets = (
 		2D2AECE376054C768654DBB2,
 		43FA92409C5441C3B67987A4,
@@ -851,7 +851,7 @@
 		buildSettings = {
 		CODE_SIGN_STYLE = Automatic;
 		CURRENT_PROJECT_VERSION = 1;
-		DEVELOPMENT_TEAM = ;
+		DEVELOPMENT_TEAM = "";
 		INFOPLIST_FILE = "UniApp/Info.plist";
 		IPHONEOS_DEPLOYMENT_TARGET = "17.0";
 		LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -879,7 +879,7 @@
 		buildSettings = {
 		CODE_SIGN_STYLE = Automatic;
 		CURRENT_PROJECT_VERSION = 1;
-		DEVELOPMENT_TEAM = ;
+		DEVELOPMENT_TEAM = "";
 		INFOPLIST_FILE = "UniAppTests/Info.plist";
 		IPHONEOS_DEPLOYMENT_TARGET = "17.0";
 		LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -918,8 +918,8 @@
 		E5B7C7BA12194525B117CA18,
 		CCF5479028124826AC7AA33D,
 	);
-		path = None;
-		sourceTree = SOURCE_ROOT;
+		name = UniApp;
+		sourceTree = "<group>";
 	};
 
 		A6AE2271D4B64C739E944638 = {
@@ -1285,7 +1285,7 @@
 		buildSettings = {
 		CODE_SIGN_STYLE = Automatic;
 		CURRENT_PROJECT_VERSION = 1;
-		DEVELOPMENT_TEAM = ;
+		DEVELOPMENT_TEAM = "";
 		INFOPLIST_FILE = "UniAppUITests/Info.plist";
 		IPHONEOS_DEPLOYMENT_TARGET = "17.0";
 		LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
