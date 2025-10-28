@@ -1,0 +1,17 @@
+included:
+  - App
+  - Core
+  - Features
+  - Tests
+  - Resources
+excluded:
+  - Resources/Assets.xcassets
+  - UniApp.xcodeproj
+line_length: 140
+identifier_name:
+  allowed_symbols: [_]
+  min_length: 2
+trailing_whitespace:
+  ignores_comments: true
+  ignores_empty_lines: true
+reporter: "xcode"
