@@ -1,0 +1,88 @@
+"onboarding_title" = "Campus Connections";
+"onboarding_community_title" = "Meet people across campus";
+"onboarding_community_subtitle" = "Swipe through classmates and discover new communities.";
+"onboarding_privacy_title" = "Verified university email";
+"onboarding_privacy_subtitle" = "Only .edu addresses keep the community safe.";
+"onboarding_premium_title" = "Unlock premium perks";
+"onboarding_premium_subtitle" = "See who liked you, rewind swipes and boost visibility.";
+"onboarding_get_started" = "Get started";
+"onboarding_next" = "Next";
+"onboarding_sign_in" = "Already have an account? Sign in";
+
+"auth_title" = "Sign in";
+"auth_continue_apple" = "Continue with Apple";
+"auth_continue_google" = "Continue with Google";
+"auth_use_email" = "Use university email";
+"auth_email_placeholder" = "name@university.edu";
+"auth_invalid_email" = "Please use a valid university email.";
+"auth_magic_link_sent" = "Magic link sent to your inbox.";
+"auth_send_magic_link" = "Send magic link";
+"auth_continue_app" = "Continue";
+"loading" = "Loading";
+"close_button" = "Close";
+
+"discover_tab" = "Discover";
+"matches_tab" = "Matches";
+"chats_tab" = "Chats";
+"profile_tab" = "Profile";
+
+"discover_title" = "Discover";
+"swipe_remaining" = "Swipes left %d / %d";
+"filters_button" = "Filters";
+"filter_age_range" = "Age range";
+"filter_faculty" = "Faculty";
+"filter_options" = "Options";
+"filter_include_anonymous" = "Include anonymous profiles";
+"apply_button" = "Apply";
+"profile_card_accessibility_label" = "Swipe card";
+
+"match_title" = "It’s a match!";
+"match_subtitle %1$@" = "%1$@ also liked you";
+"match_start_chat" = "Start chatting";
+
+"matches_empty_title" = "No matches yet";
+"matches_empty_message" = "Keep swiping to find your campus match.";
+"matches_start_chat" = "Say hello";
+
+"chat_placeholder" = "Start the conversation";
+"chat_input_placeholder" = "Type a message";
+"chat_with %1$@" = "Chat with %1$@";
+
+"profile_headline" = "Build your profile";
+"profile_subheadline" = "Add details to stand out in your campus community.";
+"profile_photos" = "Photos";
+"profile_add_photo" = "Add a photo";
+"profile_name_placeholder" = "Name";
+"profile_age %d" = "Age %d";
+"profile_faculty_placeholder" = "Faculty";
+"profile_department_placeholder" = "Department";
+"profile_bio_placeholder" = "Tell your story";
+"profile_anonymous_mode" = "Anonymous mode";
+"profile_anonymous_description" = "Blur or hide your photo for a softer reveal.";
+"profile_upgrade" = "Upgrade to Plus";
+"profile_save" = "Save changes";
+"logout_button" = "Log out";
+
+"settings_title" = "Settings";
+"settings_language" = "Language";
+"settings_language_system" = "System";
+"settings_notifications" = "Notifications";
+"settings_notifications_toggle" = "Allow notifications";
+"settings_legal" = "Legal";
+"settings_terms" = "Terms of Use";
+"settings_privacy" = "Privacy Policy";
+"legal_terms_content" = "Sample terms and conditions placeholder.";
+"legal_privacy_content" = "Sample privacy policy placeholder.";
+
+"paywall_title" = "UniApp Plus";
+"paywall_headline" = "Go further on campus";
+"paywall_subheadline" = "Unlock premium tools for more matches and visibility.";
+"paywall_rewind_title" = "Rewind";
+"paywall_rewind_desc" = "Undo your last swipe anytime.";
+"paywall_who_likes_title" = "Who liked you";
+"paywall_who_likes_desc" = "See the students who already liked you.";
+"paywall_boost_title" = "Boost";
+"paywall_boost_desc" = "Jump to the top of the deck for 30 minutes.";
+"paywall_error_title" = "Store unavailable";
+"paywall_error_message" = "Check your connection and try again.";
+"paywall_manage_subscription" = "Manage subscription";
