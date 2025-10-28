@@ -27,16 +27,6 @@ UniApp.xcodeproj/   # Xcode projesi
 3. Çalıştırma hedefi olarak iOS 17+ bir simülatör seçin (iPhone SE (3. nesil), iPhone 13 mini, iPhone 15, iPhone 15 Pro Max önerilir).
 4. `Command + R` ile uygulamayı başlatın.
 
-### Xcode 16.1 projeyi açarken "parse error" uyarısı
-Xcode 16.1, proje dosyasındaki `objectVersion` ve `compatibilityVersion` alanları 16 serisiyle eşleşmezse projeyi bozulmuş gibi işaretleyebiliyor. Depodaki `.xcodeproj` buna göre güncellendi; yine de aynı hatayı görürseniz şu adımları izleyin:
-
-1. `UniApp.xcodeproj/project.pbxproj` içinde `objectVersion = 61;` ve `compatibilityVersion = "Xcode 16.0";` satırlarını doğrulayın.
-2. `UniApp.xcodeproj/project.xcworkspace/contents.xcworkspacedata` dosyasında `location = "self:UniApp.xcodeproj"` referansının yer aldığından emin olun.
-3. Xcode’u kapatıp Derived Data klasörünü temizleyin (`Window → Projects → Delete Derived Data`).
-4. Projeyi tekrar `open UniApp.xcodeproj` komutuyla açın.
-
-Bu ayarlar Xcode 16.1’in proje dosyasını yeniden parse ederken ihtiyaç duyduğu sürüm bilgisini sağlar.
-
 ### Xcode ↔︎ GitHub kimlik doğrulaması
 Xcode’un GitHub depolarına erişirken “Credentials rejected” hatası vermesi genellikle Git’in kimlik bilgisi yardımcı programının eksik olmasından veya GitHub hesabı için kişisel erişim jetonu (PAT) kullanılmamasından kaynaklanır. macOS tarafında aşağıdaki adımları izleyerek bağlantıyı onarın:
 
