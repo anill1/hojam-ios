@@ -1,0 +1,88 @@
+"onboarding_title" = "Kampüste Tanış";
+"onboarding_community_title" = "Kampüs genelinde insanlarla tanış";
+"onboarding_community_subtitle" = "Sınıf arkadaşlarını keşfet, yeni topluluklara katıl.";
+"onboarding_privacy_title" = "Doğrulanmış üniversite e-postası";
+"onboarding_privacy_subtitle" = "Sadece .edu adresleri güvenli bir topluluk sağlar.";
+"onboarding_premium_title" = "Premium ayrıcalıkları aç";
+"onboarding_premium_subtitle" = "Seni kimlerin beğendiğini gör, geri al ve öne çık.";
+"onboarding_get_started" = "Başlayalım";
+"onboarding_next" = "İleri";
+"onboarding_sign_in" = "Zaten hesabın var mı? Giriş yap";
+
+"auth_title" = "Giriş yap";
+"auth_continue_apple" = "Apple ile devam et";
+"auth_continue_google" = "Google ile devam et";
+"auth_use_email" = "Üniversite e-postası kullan";
+"auth_email_placeholder" = "isim@universite.edu";
+"auth_invalid_email" = "Lütfen geçerli bir üniversite e-postası kullan.";
+"auth_magic_link_sent" = "Sihirli bağlantı e-postana gönderildi.";
+"auth_send_magic_link" = "Sihirli bağlantı gönder";
+"auth_continue_app" = "Devam et";
+"loading" = "Yükleniyor";
+"close_button" = "Kapat";
+
+"discover_tab" = "Keşfet";
+"matches_tab" = "Eşleşmeler";
+"chats_tab" = "Sohbetler";
+"profile_tab" = "Profil";
+
+"discover_title" = "Keşfet";
+"swipe_remaining" = "Kalan swipe %d / %d";
+"filters_button" = "Filtreler";
+"filter_age_range" = "Yaş aralığı";
+"filter_faculty" = "Fakülte";
+"filter_options" = "Seçenekler";
+"filter_include_anonymous" = "Anonim profilleri dahil et";
+"apply_button" = "Uygula";
+"profile_card_accessibility_label" = "Profil kartı";
+
+"match_title" = "Eşleşme!";
+"match_subtitle %1$@" = "%1$@ seni de beğendi";
+"match_start_chat" = "Sohbete başla";
+
+"matches_empty_title" = "Henüz eşleşme yok";
+"matches_empty_message" = "Kampüs eşini bulmak için kaydırmaya devam et.";
+"matches_start_chat" = "Merhaba de";
+
+"chat_placeholder" = "Sohbete başla";
+"chat_input_placeholder" = "Mesaj yaz";
+"chat_with %1$@" = "%1$@ ile sohbet";
+
+"profile_headline" = "Profilini oluştur";
+"profile_subheadline" = "Kampüs topluluğunda öne çıkmak için detay ekle.";
+"profile_photos" = "Fotoğraflar";
+"profile_add_photo" = "Fotoğraf ekle";
+"profile_name_placeholder" = "İsim";
+"profile_age %d" = "Yaş %d";
+"profile_faculty_placeholder" = "Fakülte";
+"profile_department_placeholder" = "Bölüm";
+"profile_bio_placeholder" = "Kendini anlat";
+"profile_anonymous_mode" = "Anonim mod";
+"profile_anonymous_description" = "Fotoğrafını bulanıklaştır ya da emoji ile kapat.";
+"profile_upgrade" = "Plus’a yükselt";
+"profile_save" = "Kaydet";
+"logout_button" = "Çıkış yap";
+
+"settings_title" = "Ayarlar";
+"settings_language" = "Dil";
+"settings_language_system" = "Sistem";
+"settings_notifications" = "Bildirimler";
+"settings_notifications_toggle" = "Bildirimlere izin ver";
+"settings_legal" = "Yasal";
+"settings_terms" = "Kullanım Koşulları";
+"settings_privacy" = "Gizlilik";
+"legal_terms_content" = "Örnek kullanım koşulları metni.";
+"legal_privacy_content" = "Örnek gizlilik metni.";
+
+"paywall_title" = "UniApp Plus";
+"paywall_headline" = "Kampüste daha görünür ol";
+"paywall_subheadline" = "Daha fazla eşleşme ve görünürlük için premium araçları aç.";
+"paywall_rewind_title" = "Geri al";
+"paywall_rewind_desc" = "Son swipe’ını her an geri al.";
+"paywall_who_likes_title" = "Kim beğendi";
+"paywall_who_likes_desc" = "Seni beğenen öğrencileri gör.";
+"paywall_boost_title" = "Boost";
+"paywall_boost_desc" = "30 dakika boyunca kart destesinin en üstüne çık.";
+"paywall_error_title" = "Store kullanılamıyor";
+"paywall_error_message" = "Bağlantını kontrol edip tekrar dene.";
+"paywall_manage_subscription" = "Aboneliği yönet";
