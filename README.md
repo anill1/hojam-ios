@@ -27,20 +27,6 @@ UniApp.xcodeproj/   # Xcode projesi
 3. Çalıştırma hedefi olarak iOS 17+ bir simülatör seçin (iPhone SE (3. nesil), iPhone 13 mini, iPhone 15, iPhone 15 Pro Max önerilir).
 4. `Command + R` ile uygulamayı başlatın.
 
-### Xcode 16.1 projeyi açarken "parse error" uyarısı
-Xcode 16.1’de görülen “The project is damaged and cannot be opened due to a parse error” mesajı iki temel sebepten kaynaklanabilir:
-
-1. **Proje sürüm bilgileri 16 serisiyle uyumlu değil.** `UniApp.xcodeproj/project.pbxproj` içinde `objectVersion = 61;` ve `compatibilityVersion = "Xcode 16.0";` satırlarının yer aldığını doğrulayın. Eğer farklı değerler görüyorsanız, Xcode 16.1 projeyi açmayı reddeder.
-2. **Build ayarlarında makro değerleri tırnaksız bırakılmış.** `PRODUCT_NAME = "$(TARGET_NAME)";` ve `BUNDLE_LOADER = "$(TEST_HOST)";` gibi makro içeren alanların çift tırnakla çevrildiğinden emin olun. Tırnaklar eksikse OpenStep plist söz dizimi bozulur ve Xcode projeyi “damaged” olarak işaretler.
-
-Depodaki proje dosyası bu iki koşulu da sağlayacak şekilde güncellendi. Hâlâ aynı uyarıyı alırsanız:
-
-1. `UniApp.xcodeproj/project.xcworkspace/contents.xcworkspacedata` dosyasında `location = "self:UniApp.xcodeproj"` referansının yer aldığını kontrol edin.
-2. Xcode’u kapatıp Derived Data klasörünü temizleyin (`Window → Projects → Delete Derived Data`).
-3. Projeyi tekrar `open UniApp.xcodeproj` komutuyla açın.
-
-Bu kontroller, Xcode 16.1’in proje dosyasını hatasız parse etmesi için yeterlidir; ayrıca Xcode 16.1’den daha yeni (ör. Xcode 16.2/17) bir sürüme yükseltmenize gerek yoktur.
-
 ### Xcode ↔︎ GitHub kimlik doğrulaması
 Xcode’un GitHub depolarına erişirken “Credentials rejected” hatası vermesi genellikle Git’in kimlik bilgisi yardımcı programının eksik olmasından veya GitHub hesabı için kişisel erişim jetonu (PAT) kullanılmamasından kaynaklanır. macOS tarafında aşağıdaki adımları izleyerek bağlantıyı onarın:
 
