@@ -11,34 +11,25 @@ final class OnboardingViewModel: ObservableObject {
 
         var icon: String {
             switch self {
-            case .community:
-                "person.3.fill"
-            case .privacy:
-                "lock.shield.fill"
-            case .premium:
-                "sparkles"
+            case .community: return "person.3.fill"
+            case .privacy: return "lock.shield.fill"
+            case .premium: return "sparkles"
             }
         }
 
         var titleKey: String {
             switch self {
-            case .community:
-                "onboarding_community_title"
-            case .privacy:
-                "onboarding_privacy_title"
-            case .premium:
-                "onboarding_premium_title"
+            case .community: return "onboarding_community_title"
+            case .privacy: return "onboarding_privacy_title"
+            case .premium: return "onboarding_premium_title"
             }
         }
 
         var subtitleKey: String {
             switch self {
-            case .community:
-                "onboarding_community_subtitle"
-            case .privacy:
-                "onboarding_privacy_subtitle"
-            case .premium:
-                "onboarding_premium_subtitle"
+            case .community: return "onboarding_community_subtitle"
+            case .privacy: return "onboarding_privacy_subtitle"
+            case .premium: return "onboarding_premium_subtitle"
             }
         }
     }

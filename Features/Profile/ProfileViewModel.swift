@@ -1,6 +1,6 @@
 import Foundation
-import PhotosUI
 import SwiftUI
+import PhotosUI
 
 @MainActor
 final class ProfileViewModel: ObservableObject {
@@ -41,13 +41,11 @@ final class ProfileViewModel: ObservableObject {
     func handlePhotoSelection() {
         Task {
             guard let item = photoItems.first else { return }
-            guard let data = try? await item.loadTransferable(type: Data.self) else { return }
-            guard let cachesDirectory = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first else {
-                return
+            if let data = try? await item.loadTransferable(type: Data.self),
+               let tempURL = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first?.appendingPathComponent(UUID().uuidString + ".jpg") {
+                try? data.write(to: tempURL)
+                profile.photos = [tempURL]
             }
-            let tempURL = cachesDirectory.appendingPathComponent(UUID().uuidString + ".jpg")
-            try? data.write(to: tempURL)
-            profile.photos = [tempURL]
         }
     }
 }

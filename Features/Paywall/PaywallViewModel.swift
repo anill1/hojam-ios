@@ -21,21 +21,9 @@ final class PaywallViewModel: ObservableObject {
     private let analytics: AnalyticsClient
     private let remoteConfig: RemoteConfigClient
     private let features: [PaywallFeature] = [
-        PaywallFeature(
-            icon: "goforward",
-            title: NSLocalizedString("paywall_rewind_title", comment: ""),
-            description: NSLocalizedString("paywall_rewind_desc", comment: "")
-        ),
-        PaywallFeature(
-            icon: "eye",
-            title: NSLocalizedString("paywall_who_likes_title", comment: ""),
-            description: NSLocalizedString("paywall_who_likes_desc", comment: "")
-        ),
-        PaywallFeature(
-            icon: "bolt.fill",
-            title: NSLocalizedString("paywall_boost_title", comment: ""),
-            description: NSLocalizedString("paywall_boost_desc", comment: "")
-        ),
+        PaywallFeature(icon: "goforward", title: NSLocalizedString("paywall_rewind_title", comment: ""), description: NSLocalizedString("paywall_rewind_desc", comment: "")),
+        PaywallFeature(icon: "eye", title: NSLocalizedString("paywall_who_likes_title", comment: ""), description: NSLocalizedString("paywall_who_likes_desc", comment: "")),
+        PaywallFeature(icon: "bolt.fill", title: NSLocalizedString("paywall_boost_title", comment: ""), description: NSLocalizedString("paywall_boost_desc", comment: ""))
     ]
 
     var featureList: [PaywallFeature] { features }

@@ -1,5 +1,5 @@
-@testable import UniApp
 import XCTest
+@testable import UniApp
 
 final class AuthSignInViewModelTests: XCTestCase {
     func testValidEmail() {

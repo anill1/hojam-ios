@@ -11,18 +11,18 @@ struct DefaultStoreKitClient: StoreKitClient {
         try await Product.products(for: [
             "com.uniapp.plus.monthly",
             "com.uniapp.plus.quarterly",
-            "com.uniapp.boost.single",
+            "com.uniapp.boost.single"
         ])
     }
 
     func purchase(product: Product) async throws -> Transaction? {
         let result = try await product.purchase()
         switch result {
-        case let .success(verification):
+        case .success(let verification):
             switch verification {
             case .unverified:
                 return nil
-            case let .verified(transaction):
+            case .verified(let transaction):
                 await transaction.finish()
                 return transaction
             }

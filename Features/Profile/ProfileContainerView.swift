@@ -1,5 +1,5 @@
-import PhotosUI
 import SwiftUI
+import PhotosUI
 import UIKit
 
 struct ProfileContainerView: View {
@@ -113,7 +113,7 @@ struct ProfileContainerView: View {
                 .textContentType(.name)
                 .padding()
                 .background(RoundedRectangle(cornerRadius: 16).fill(UniColor.surface))
-            Stepper(value: $viewModel.profile.age, in: 18 ... 40) {
+            Stepper(value: $viewModel.profile.age, in: 18...40) {
                 Text(String(format: NSLocalizedString("profile_age %d", comment: ""), viewModel.profile.age))
             }
             TextField("profile_faculty_placeholder", text: $viewModel.profile.faculty)
@@ -123,7 +123,7 @@ struct ProfileContainerView: View {
                 .padding()
                 .background(RoundedRectangle(cornerRadius: 16).fill(UniColor.surface))
             TextField("profile_bio_placeholder", text: $viewModel.profile.bio, axis: .vertical)
-                .lineLimit(3 ... 5)
+                .lineLimit(3...5)
                 .padding()
                 .background(RoundedRectangle(cornerRadius: 16).fill(UniColor.surface))
         }

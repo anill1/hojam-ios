@@ -15,12 +15,12 @@ struct SwipeFilterView: View {
                     VStack(alignment: .leading) {
                         Text("\(Int(filter.minAge)) - \(Int(filter.maxAge))")
                         RangeSlider(range: Binding(
-                            get: { Double(filter.minAge) ... Double(filter.maxAge) },
+                            get: { Double(filter.minAge)...Double(filter.maxAge) },
                             set: { newValue in
                                 filter.minAge = Int(newValue.lowerBound)
                                 filter.maxAge = Int(newValue.upperBound)
                             }
-                        ), bounds: 18 ... 35)
+                        ), bounds: 18...35)
                     }
                 }
 
@@ -76,11 +76,11 @@ private struct RangeSlider: View {
         VStack {
             Slider(value: Binding(
                 get: { range.lowerBound },
-                set: { newValue in range = newValue ... max(newValue, range.upperBound) }
+                set: { newValue in range = newValue...max(newValue, range.upperBound) }
             ), in: bounds)
             Slider(value: Binding(
                 get: { range.upperBound },
-                set: { newValue in range = min(newValue, range.lowerBound) ... newValue }
+                set: { newValue in range = min(newValue, range.lowerBound)...newValue }
             ), in: bounds)
         }
     }

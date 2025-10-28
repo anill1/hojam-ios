@@ -22,8 +22,8 @@ final class KeychainTokenStore: TokenStore {
 }
 
 protocol PreferencesStore {
-    func save<Value>(value: Value, for key: String) where Value: Codable
-    func load<Value>(for key: String, default defaultValue: Value) -> Value where Value: Codable
+    func save<Value: Codable>(value: Value, for key: String)
+    func load<Value: Codable>(for key: String, default defaultValue: Value) -> Value
 }
 
 final class InMemoryPreferencesStore: PreferencesStore {

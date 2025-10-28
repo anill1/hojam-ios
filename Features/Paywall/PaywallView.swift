@@ -1,18 +1,12 @@
-import StoreKit
 import SwiftUI
+import StoreKit
 
 struct PaywallView: View {
     @Environment(\.dismiss) private var dismiss
     @StateObject private var viewModel: PaywallViewModel
 
     init(environment: AppEnvironment) {
-        _viewModel = StateObject(
-            wrappedValue: PaywallViewModel(
-                storeKit: environment.storeKit,
-                analytics: environment.analytics,
-                remoteConfig: environment.remoteConfig
-            )
-        )
+        _viewModel = StateObject(wrappedValue: PaywallViewModel(storeKit: environment.storeKit, analytics: environment.analytics, remoteConfig: environment.remoteConfig))
     }
 
     var body: some View {
@@ -60,7 +54,7 @@ struct PaywallView: View {
             ProgressView()
         case .failed:
             EmptyStateView(icon: "wifi.slash", title: "paywall_error_title", message: "paywall_error_message")
-        case let .loaded(products):
+        case .loaded(let products):
             VStack(spacing: 12) {
                 ForEach(products) { product in
                     Button {

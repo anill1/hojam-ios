@@ -11,12 +11,9 @@ final class SettingsViewModel: ObservableObject {
 
         var title: String {
             switch self {
-            case .system:
-                NSLocalizedString("settings_language_system", comment: "")
-            case .english:
-                "English"
-            case .turkish:
-                "Türkçe"
+            case .system: return NSLocalizedString("settings_language_system", comment: "")
+            case .english: return "English"
+            case .turkish: return "Türkçe"
             }
         }
     }

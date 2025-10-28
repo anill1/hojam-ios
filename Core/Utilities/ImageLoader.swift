@@ -14,18 +14,17 @@ final class ImageLoader: ObservableObject {
 
     func load() {
         guard let url else { return }
-        if let cached = cache.cachedResponse(for: URLRequest(url: url)) {
-            if let uiImage = UIImage(data: cached.data) {
-                image = Image(uiImage: uiImage)
-                return
-            }
+        if let cached = cache.cachedResponse(for: URLRequest(url: url)),
+           let uiImage = UIImage(data: cached.data) {
+            image = Image(uiImage: uiImage)
+            return
         }
 
         Task {
             do {
                 let (data, response) = try await URLSession.shared.data(from: url)
-                if let httpResponse = response as? HTTPURLResponse,
-                   (200 ..< 300).contains(httpResponse.statusCode) {
+                if let response = response as? HTTPURLResponse,
+                   200..<300 ~= response.statusCode {
                     let cachedData = CachedURLResponse(response: response, data: data)
                     cache.storeCachedResponse(cachedData, for: URLRequest(url: url))
                 }

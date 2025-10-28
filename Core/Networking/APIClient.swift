@@ -31,7 +31,7 @@ final class MockAPIClient: APIClient {
 
     init() {
         let tags = ["Kampüs Kahvesi", "Hackathon", "Basketbol", "Girişimcilik"].map { InterestTag(title: $0) }
-        let sampleProfiles = (0 ..< 12).map { index -> UserProfile in
+        let sampleProfiles = (0..<12).map { index -> UserProfile in
             UserProfile(
                 name: "Öğrenci \(index + 1)",
                 age: 20 + (index % 4),
@@ -44,32 +44,28 @@ final class MockAPIClient: APIClient {
             )
         }
 
-        swipeCards = sampleProfiles.map { profile in
-            SwipeCard(
-                profile: profile,
-                distance: Int.random(in: 0 ... 5),
-                isAnonymous: profile.anonymityMode != .visible
-            )
+        self.swipeCards = sampleProfiles.map { profile in
+            SwipeCard(profile: profile, distance: Int.random(in: 0...5), isAnonymous: profile.anonymityMode != .visible)
         }
 
-        matches = []
-        messages = [:]
-        profile = sampleProfiles.first ?? UserProfile(
+        self.matches = []
+        self.messages = [:]
+        self.profile = sampleProfiles.first ?? UserProfile(
             name: "Sen",
             age: 22,
             faculty: "Mühendislik",
             department: "Bilgisayar",
             bio: "SwiftUI ile geleceği tasarlıyorum",
             interests: tags,
-            photos: [URL(string: "https://picsum.photos/id/1/400/600")!],
+            photos: [URL(string: "https://picsum.photos/id/1/400/600")!]
         )
-        config = RemoteConfigPayload(
+        self.config = RemoteConfigPayload(
             paywallCopy: .init(
                 headline: "Üniversitede fark yarat!",
                 subtitle: "Plus ile seni beğenenleri gör, geri al ve Boost ile öne çık.",
-                cta: "Plus’a Katıl",
+                cta: "Plus’a Katıl"
             ),
-            swipeLimit: 20,
+            swipeLimit: 20
         )
     }
 
@@ -106,18 +102,8 @@ final class MockAPIClient: APIClient {
         try await Task.sleep(for: .milliseconds(120))
         if messages[matchID] == nil {
             messages[matchID] = [
-                ChatMessage(
-                    id: UUID(),
-                    sender: .other,
-                    content: "Selam! Kampüs festivaline gidecek misin?",
-                    sentAt: Date().addingTimeInterval(-3600)
-                ),
-                ChatMessage(
-                    id: UUID(),
-                    sender: .me,
-                    content: "Kesinlikle! Birlikte gidelim mi?",
-                    sentAt: Date().addingTimeInterval(-1800)
-                ),
+                ChatMessage(id: UUID(), sender: .other, content: "Selam! Kampüs festivaline gidecek misin?", sentAt: Date().addingTimeInterval(-3600)),
+                ChatMessage(id: UUID(), sender: .me, content: "Kesinlikle! Birlikte gidelim mi?", sentAt: Date().addingTimeInterval(-1800))
             ]
         }
         return messages[matchID] ?? []
