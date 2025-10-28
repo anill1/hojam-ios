@@ -27,22 +27,6 @@ UniApp.xcodeproj/   # Xcode projesi
 3. Çalıştırma hedefi olarak iOS 17+ bir simülatör seçin (iPhone SE (3. nesil), iPhone 13 mini, iPhone 15, iPhone 15 Pro Max önerilir).
 4. `Command + R` ile uygulamayı başlatın.
 
-### Xcode 16.1 projeyi açarken "parse error" uyarısı
-Xcode 16.1’de görülen “The project is damaged and cannot be opened due to a parse error” mesajı çoğunlukla bozulmuş `project.pbxproj` içeriklerinden kaynaklanır. Aşağıdaki adımlarla hem teşhis hem de onarım yapabilirsiniz:
-
-1. **Merge çakışmalarını tarayın.** Çatışma işaretleri (`<<<<<<<`, `=======`, `>>>>>>>`) kaldıysa Xcode dosyayı parse edemez. Terminalde proje kökünden şu komutları çalıştırın:
-   ```bash
-   cd /Users/anilulger/Desktop/hojam-ios
-   grep -R --line-number --color=always -E '<<<<<<<|=======|>>>>>>>' UniApp.xcodeproj
-   grep -R --line-number --color=always -E '<<<<<<<|=======|>>>>>>>' UniApp.xcworkspace 2>/dev/null
-   ```
-   Varsa her bloğu manuel olarak çözün ve tekrar kaydedin.
-2. **plist sözdizimini doğrulayın.** macOS ortamında `plutil -lint UniApp.xcodeproj/project.pbxproj` komutu “OK” döndürmelidir. Farklı bir çıktı alırsanız dosyada hâlâ bozuk satırlar vardır.
-3. **Projeyi Xcode 16 serisine uyumlu tutun.** `project.pbxproj` içinde `objectVersion = 61;`, `compatibilityVersion = "Xcode 16.0";` ve build ayarlarında `PRODUCT_NAME = "$(TARGET_NAME)";` / `BUNDLE_LOADER = "$(TEST_HOST)";` gibi makro değerlerinin çift tırnakla yazıldığını doğrulayın.
-4. **Workspace referansını ve Derived Data’yı temizleyin.** `UniApp.xcodeproj/project.xcworkspace/contents.xcworkspacedata` dosyasındaki `location = "self:UniApp.xcodeproj"` değerinin mevcut olduğundan emin olun, ardından Xcode’u kapatıp `Window → Projects → Delete Derived Data` ile önbelleği temizleyin.
-
-Bu adımlar tamamlandıktan sonra `xed .` ya da `open UniApp.xcodeproj` komutuyla projeyi yeniden açabilirsiniz. Depodaki proje dosyası yukarıdaki koşullarla uyumludur; bu nedenle Xcode 16.1 kullanmaya devam edebilir, daha yeni bir sürüme yükseltmek zorunda kalmazsınız.
-
 ### Xcode ↔︎ GitHub kimlik doğrulaması
 Xcode’un GitHub depolarına erişirken “Credentials rejected” hatası vermesi genellikle Git’in kimlik bilgisi yardımcı programının eksik olmasından veya GitHub hesabı için kişisel erişim jetonu (PAT) kullanılmamasından kaynaklanır. macOS tarafında aşağıdaki adımları izleyerek bağlantıyı onarın:
 
